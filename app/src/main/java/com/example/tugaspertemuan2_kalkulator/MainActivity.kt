@@ -45,8 +45,10 @@ class MainActivity : AppCompatActivity() {
                 val postfix = infixToPostfix(input)
                 val result = evaluatePostfix(postfix)
                 txtOutput.text = result.toString()
+                Toast.makeText(this,"Hasil = " + result, Toast.LENGTH_LONG).show()
             } catch (e: Exception) {
                 txtOutput.text = "Error"
+                Toast.makeText(this,"Error", Toast.LENGTH_LONG).show()
             }
         }
 
